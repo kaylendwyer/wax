@@ -25,3 +25,7 @@ WORKDIR /wax
 RUN bundle
 
 EXPOSE 4000
+
+# Try setting cmd to make jekyll run inside docker container
+CMD ["bundle", "exec", "jekyll", "serve", "--livereload", "--host"]
+
